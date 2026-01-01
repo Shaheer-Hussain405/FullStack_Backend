@@ -1,0 +1,10 @@
+// Dev dependencies
+
+nodemon
+prettier
+
+// Dependencies
+
+dotenv
+express
+mongoose
