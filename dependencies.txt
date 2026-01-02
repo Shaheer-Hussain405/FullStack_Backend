@@ -8,3 +8,5 @@ prettier
 dotenv
 express
 mongoose
+cors
+cookie-parser
