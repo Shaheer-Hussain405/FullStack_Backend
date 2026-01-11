@@ -38,8 +38,11 @@ const userSchema = new Schema(
             type: String, // Cloudinary 
             required: true
         },
-        overimage: {
+        coverimage: {
             type: string, // Cloudinary
+        },
+        refreshToken:{
+            type: string
         }
     }, {timestamps: true}
 )
@@ -47,7 +50,7 @@ const userSchema = new Schema(
 userSchema.pre("save", async function (next){
     if (!this.isModified(password)) return next()
 
-    this.password = bcrypt.hash(this.password)
+    this.password = bcrypt.hash(this.password,10)
     next()
 })
 

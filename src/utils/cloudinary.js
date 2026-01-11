@@ -17,7 +17,7 @@ const uploadOnCloudinary = async (localFilePath) =>{
         })
         // console.log("File Successfully uploaded to Public URL", response.url);
 
-        fs.unlinkSync(localFilePath)
+        // fs.unlinkSync(localFilePath)
         return response
     } catch (error) {
         fs.unlinkSync(localFilePath)
@@ -26,4 +26,4 @@ const uploadOnCloudinary = async (localFilePath) =>{
 }
 
 
-export default uploadOnCloudinary
+export {uploadOnCloudinary}
